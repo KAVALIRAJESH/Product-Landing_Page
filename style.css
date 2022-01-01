@@ -9,26 +9,26 @@ body {
 }
 
 #page-wrapper {
-  position: relative;
+  position: fixed;
+  top: 0;
 }
 #header {
-  /*position: fixed;*/
-  min-height: 75px;
-  padding: 0px 20px;
+  min-height: 85px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #eee;
 }
 #header-img {
-  width: 30vw;
+  width: 50%;
+}
+nav{
+  width: 70%;
 }
 nav > ul {
-  width: 60vw;
   display: flex;
-  /*flex-direction: row;*/
+  flex-direction: row;
   justify-content: space-around;
-  margin-left: 60px;
 }
 li {
   list-style: none;
@@ -37,12 +37,15 @@ a {
   color: #000;
   text-decoration: none;
 }
+nav li a:hover{
+  background-color: #e6ac0f;
+}
 #hero {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 83px;
+  
 }
 #hero,
 h1 {
@@ -68,106 +71,132 @@ h1 {
   background-color: #e6ac0f;
 }
 
-.grid{
-	display: flex;
-
+.grid {
+  display: flex;
 }
-.features{
-	margin-top: 80px;
+.features {
+  margin-top: 80px;
 }
-.fa-fire{
+.fa-fire {
   margin-right: 25px;
 }
-.fa{
-	margin-bottom: 60px;
-	margin-left: 250px;
-	color: darkorange;
-	font-size: 3rem;
+.fa {
+  margin-bottom: 60px;
+  margin-left: 250px;
+  color: darkorange;
+  font-size: 3rem;
 }
-.disc{
-	margin-left: 100px;
+.disc {
+  margin-left: 100px;
 }
-.video{
-	text-align: center;
+.video {
+  text-align: center;
 }
 #pricing {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: calc(70% / 3);
-    margin: 10px;
-    border: 1px solid #000;
-    border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  width: calc(70% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+ 
 }
 .product > .level {
-    background-color: #ddd;
-    color: black;
-    padding: 15px 0;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: 700;
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .product > button {
-    border: 0;
-    margin: 15px 0;
-    background-color: #f1c40f;
-    font-weight: 400;
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
 }
 .btn {
-    padding: 0 20px;
-    height: 40px;
-    font-size: 1em;
-    font-weight: 900;
-    text-transform: uppercase;
-    border: 3px black solid;
-    border-radius: 2px;
-    background: transparent;
-    cursor: pointer;
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
 }
+
 .product > ol {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 .product > ol > li {
-    padding: 5px 0;
-}
-li{
-	list-style-type: none;
+  padding: 5px 0;
 }
 .product .btn:hover {
   background-color: #e6ac0f;
 }
 footer {
-    margin-top: 30px;
-    margin-right: 180px;
-    margin-left: 180px;
-    background-color: #ddd;
-    padding: 20px;
-   
+  margin-top: 30px;
+  margin-right: 180px;
+  margin-left: 180px;
+  background-color: #ddd;
+  padding: 20px;
 }
 footer > ul {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 footer > ul > li {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 footer > span {
-    margin-top: 5px;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 0.9em;
-    color: #444;
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
 }
-
-@media screen and (max-width: 768px) {
-  body {
+/* For Mobile responsive */
+@media screen and (max-width: 600px) {
+  .product{
+    width: 100%;
+    display: block;
+  }
+  #pricing {
+    display: block;
+  }
+  nav > ul {
+    margin-left: 0;
     width: 100%;
   }
+  nav > ul li{
+     margin-right: 10px;
+  }
+  #header-img{
+    width: 95%;
+  }
+  .disc{
+    margin-left: 10px;
+  }
+.fa {
+    margin-left: 10px;
+}
+iframe{
+  width: 100%;
+}
+#header{
+  flex-direction: column;
+}
+footer{
+  margin: 0;
+}
 }
